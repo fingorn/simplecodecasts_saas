@@ -2,8 +2,11 @@ class ProfilesController < ApplicationController
     def new 
        #form where a user can fill out their OWN profile
        @user = User.find(params[:user_id])
-       @profile = @user.build_profile #method is available because profile is a nested resource in users (routes file)
+       
+       # Disabled this because it will break the /users/:id show link every time after /users/:id/new is called
+       #@profile = @user.build_profile #method is available because profile is a nested resource in users (routes file)
         
+        @profile = Profile.new
     end
     
     def create
