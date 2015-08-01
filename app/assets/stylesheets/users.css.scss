@@ -1,0 +1,47 @@
+.job-title-icon {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: white;
+    text-align: center;
+    
+
+}
+
+//dfferent when used in:
+//.well .profile-description { } 
+// means that profile-description is nested in a div class="well"
+// <div="well"><div class="profile-description"></div></div>
+
+//but in this case, well and profile description are in the same div, thus if you want to target specifically,
+//<div="well profile-description"></div>
+// this is for same div with two class names ONLY
+.well.profile-block{
+    color: #fff;
+    h3{
+        margin-top: 0px;
+    }
+}
+
+.well.profile-description{
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    
+}
+
+.well.contact-info{
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.profile-avatar{
+    border-radius:50%;
+    -webkit-box-shadow: 0px 8px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 8px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 8px 5px 0px rgba(50, 50, 50, 0.75);
+    border:2px solid white;
+}
