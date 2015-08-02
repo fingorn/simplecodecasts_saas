@@ -1,7 +1,11 @@
 
 <div class="row">
     <div class="col-md-3 text-center">
-            <%= image_tag @user.profile.avatar.url(:thumb), class: "profile-avatar" %><br>
+        <% if @user.profile.avatar.file? %>
+            <%= image_tag @user.profile.avatar.url, class: "profile-avatar user-show-avatar" %><br>
+        <% else %>
+            <%= image_tag "http://lorempixel.com/200/200/cats/", class: "profile-avatar user-show-avatar" %>
+        <% end %>
     </div>
     <div class="col-md-6">
         <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
